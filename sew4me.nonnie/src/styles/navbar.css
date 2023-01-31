@@ -1,0 +1,85 @@
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 26px;
+    /* background-color: var(--pink); */
+}
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: flex-end; */
+    width: 70%;
+    
+}
+    .nav-links a {
+        color: var(--pink);
+        padding: 10px;
+        font-size: 2em;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px var(--black);
+        font-family: 'Grand Hotel', cursive;
+    }
+        .nav-links a:hover {
+            /* opacity: 0.7; */
+            color: var(--peach);
+            text-shadow: 1px 1px 1px var(--darkPink);
+        }
+    
+    .nav-links-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    .nav-links-mobile a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .nav-links-mobile a:hover {
+        opacity: 0.7;
+    }
+    .hamburger .hamburgerLines{
+        width: 25px;
+        height: 4px;
+        background-color: var(--peach);
+        
+        margin: 4px 0;
+    }
+    @media (max-width: 800px) {
+        .hamburger {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 70px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    /* Hide the navbar when scrolling down */
+    @media (min-width: 800px) {
+        body {
+            padding-top: 100px;
+        }
+        /* nav {
+            display: none;
+        } */
+        .show-nav {
+            display: block !important;
+        }
+    }
